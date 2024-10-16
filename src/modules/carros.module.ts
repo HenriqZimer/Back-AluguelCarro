@@ -10,5 +10,8 @@ import { CarrosService } from 'src/services/carros.service';
   ],
   controllers: [CarrosController],
   providers: [CarrosService],
+  exports: [
+    MongooseModule.forFeature([{ name: Carro.name, schema: CarroSchema }]),
+  ],
 })
 export class CarrosModule {}
